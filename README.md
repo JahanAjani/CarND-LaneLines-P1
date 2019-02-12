@@ -10,47 +10,54 @@ When we drive, we use our eyes to decide where to go.  The lines on the road tha
 
 In this project you will detect lane lines in images using Python and OpenCV.  OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.  
 
-To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. We have included template files to be used both for the [code](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md).The code file is called P1.ipynb and the writeup template is writeup_template.md 
+**Step 1:** Getting setup with Python
 
-To meet specifications in the project, take a look at the requirements in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
+To do this project, you will need Python 3.6 along with the numpy, matplotlib, and OpenCV libraries, as well as Jupyter Notebook installed. 
 
+Follow below steps to create virual environment for this project:
 
-Creating a Great Writeup
----
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
+`>  python -m venv laneDetect`
 
-1. Describe the pipeline
+`>  laneDetect\Scripts\activate`
 
-2. Identify any shortcomings
+**Step 2:** Installing OpenCV
 
-3. Suggest possible improvements
+Once you have python environment active in console, first double check you are in your Python 3.5 environment:
 
-We encourage using images in your writeup to demonstrate how your pipeline works.  
+`>python`
 
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
+run the following command at the terminal prompt to get OpenCV:
 
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup. Here is a link to a [writeup template file](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). 
+`>  conda install -c https://conda.anaconda.org/menpo opencv3`
 
+then to test if OpenCV is installed correctly:
 
-The Project
----
+`> python`  
+`>>> import cv2`  
+`>>>`  
+(Ctrl-d to exit Python)
 
-## If you have already installed the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) you should be good to go!   If not, you should install the starter kit to get started on this project. ##
+**Step 3:** Installing moviepy  
 
-**Step 1:** Set up the [CarND Term1 Starter Kit](https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/83ec35ee-1e02-48a5-bdb7-d244bd47c2dc/lessons/8c82408b-a217-4d09-b81d-1bda4c6380ef/concepts/4f1870e0-3849-43e4-b670-12e6f2d4b7a7) if you haven't already.
+We recommend the "moviepy" package for processing video in this project (though you're welcome to use other packages if you prefer).  
 
-**Step 2:** Open the code in a Jupyter Notebook
+To install moviepy run:
 
-You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out [Udacity's free course on Anaconda and Jupyter Notebooks](https://classroom.udacity.com/courses/ud1111) to get started.
+`>pip install moviepy`  
 
-Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
+and check that the install worked:
+
+`>python`  
+`>>>import moviepy`  
+`>>>`  
+(Ctrl-d to exit Python)
+
+**Step 4:** Opening the code in a Jupyter Notebook
+
+You will complete this project in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out <A HREF="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/" target="_blank">this link</A> to get started.
+
+Jupyter is an ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, run the following command at the terminal prompt (be sure you're in your Python 3 environment!):
 
 `> jupyter notebook`
 
 A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
-
-**Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
-
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
-
